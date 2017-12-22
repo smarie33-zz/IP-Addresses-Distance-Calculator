@@ -1,0 +1,12 @@
+@mixin button($color1: $black, $color2: $white) {
+	padding: $overallPadding;
+	border: 1px solid $color2;
+	background-color: $color1;
+	color: $color2;
+	&:hover{
+		border: 1px solid $color1;
+		background-color: $color2;
+		color: $color1;
+
+	}
+}

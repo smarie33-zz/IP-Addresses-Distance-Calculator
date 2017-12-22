@@ -1,0 +1,76 @@
+body{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: $default-fontsize;
+	margin: 0;
+	padding: 0
+}
+
+h1, h2{
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+ul{
+	list-style-type: none;
+	    padding: 0 $overallPadding;
+	cursor: pointer;
+
+	li{
+	 	div{
+	 		display: inline-block;
+	 		margin-right: $overallPadding;
+	 		padding-bottom: 10px;
+	 	}
+	}
+}
+input{
+	padding: $overallPadding;
+	font-size: $default-fontsize;
+}
+
+.button{
+	@include button();
+	&.float-right{
+		float:right
+	}
+}
+
+.#{$prefix}entire-app{
+	max-width: 800px;
+	margin: auto;
+	position: relative;
+}
+.#{$prefix}list-container{
+	float:left;
+	width: 60%;
+	height: 100%;
+	border-right: 1px solid black;
+	@media screen and (max-width: $bootstrap-size-md){
+		width: 100%;
+		height: auto;
+		padding-bottom: 30px;
+		border-right: none;
+		border-bottom: 1px solid black;
+	} 
+}
+.#{$prefix}user-container{
+	float:left;
+	width: 39%;
+	@media screen and (max-width: $bootstrap-size-md){
+		width: 100%;
+	} 
+}
+.#{$prefix}error{
+	color: $red;
+}
+.#{$prefix}add{
+	padding-top: 30px;
+}
+.#{$prefix}remove-item {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.#{$prefix}amount{
+	font-weight: bold;
+	padding-right: $overallPadding;
+}
