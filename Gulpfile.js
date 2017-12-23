@@ -44,7 +44,13 @@ gulp.task('webpack_stream', function(){
 
 gulp.task("launch_server", function(callback) {
     browserSync.init({
-    server: "./build/",
+    server: {
+      baseDir: "./build/",
+      middleware: function (req, res, next) {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        next();
+      }
+    },
     startPath: "/index.html",
     ghostMode: {
       clicks: false,
