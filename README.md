@@ -18,5 +18,6 @@ Create a mobile optimized single page React app that takes two IP addresses and 
 - check for blank fields
 - error reporting from GrapgiQL
 - error reporting from Google API
+- Live demo: (http://mosleygraphics.com/IP-Addresses-Distance-Calculator/)
 
 
